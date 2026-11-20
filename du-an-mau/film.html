@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Video thử</title>
+<style>html,body{margin:0;background:#000}canvas{display:block;width:100vw;max-width:540px;height:auto}</style>
+</head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script src="words.js"></script>
+<script src="engine.js"></script>
+<script src="shots.js"></script>
+<script>
+(async () => {
+  // Font Baloo 2 (có dấu tiếng Việt) do setup.sh tải về assets/fonts/
+  const sub = new FontFace('Sub', 'url(assets/fonts/Baloo2.ttf)', { weight: '400 800' });
+  document.fonts.add(await sub.load());
+  const load = (n, src) => new Promise((ok, err) => { const im = new Image(); im.onload = () => { IMG[n] = im; ok(); }; im.onerror = () => err(new Error('Không tải được ' + src)); im.src = src; });
+  await Promise.all([...BACKGROUNDS.map(n => load(n, `assets/bg/${n}.svg`)), ...CHARACTERS.map(n => load(n, `assets/cut/${n}.svg`))]);
+  buildChunks(KEYS); plan();
+  window.END = END;
+  window.seek = t => render(t);
+  render(0);
+  window.READY = true;
+  // Thêm #play sau địa chỉ để xem trực tiếp trong trình duyệt (lặp lại liên tục)
+  if (location.hash === '#play') { const t0 = performance.now(); const loop = () => { render((performance.now() - t0) / 1000 % END); requestAnimationFrame(loop); }; loop(); }
+})();
+</script>
+</body></html>

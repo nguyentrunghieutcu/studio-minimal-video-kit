@@ -1,0 +1,6 @@
+.venv/
+du-an-mau/assets/fonts/
+du-an-mau/assets/audio/
+du-an-mau/renders/
+du-an-mau/review/
+.DS_Store
