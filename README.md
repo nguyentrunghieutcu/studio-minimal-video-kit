@@ -6,7 +6,9 @@ Kèm sẵn video mẫu "Bạch tuộc có ba trái tim" dài 15 giây để ch�
 
 > **Muốn bản đầy đủ?** [Edit Kit](https://hieuhoccode.com/san-pham/edit-kit?nguon=repo) có thêm căn từng từ theo giọng thật, sinh ảnh nhân vật hàng loạt, hiệu ứng âm thanh, ảnh bìa và bộ hiệu ứng cho clip quay mặt.
 
-![Sáu cảnh của video mẫu](assets/preview.jpg)
+![Năm khung hình từ video hoạt hình về bạch tuộc, cá cần câu và cá ngựa](assets/preview.jpg)
+
+Khung hình từ các video mình đã đăng, làm bằng bộ Studio Minimal đầy đủ với hình nhân vật và nền mình tự chuẩn bị. Repo này kèm một mẫu bạch tuộc vẽ bằng mã để bạn chạy thử; video của bạn đẹp tới đâu tuỳ ảnh bạn đưa vào.
 
 ## Cài (một dòng)
 
